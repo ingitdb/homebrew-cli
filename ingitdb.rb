@@ -5,21 +5,21 @@
 class Ingitdb < Formula
   desc "ingitdb – a CLI for a developer-grade, schema-validated, AI-native database whose storage engine is a Git repository."
   homepage "https://ingitdb.com"
-  version "0.16.26"
+  version "0.16.28"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.16.26/ingitdb_0.16.26_darwin_amd64.tar.gz"
-      sha256 "9a0ff106b3ddde06847448c40c95cf09589c501e8180d48bb6ca519f5e642e55"
+      url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.16.28/ingitdb_0.16.28_darwin_amd64.tar.gz"
+      sha256 "5ccc6cdee7a3aeff91713c850240b25f069f8da7f1a3b92665c1c953f4ad59c1"
 
       define_method(:install) do
         bin.install "ingitdb"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.16.26/ingitdb_0.16.26_darwin_arm64.tar.gz"
-      sha256 "77cd12e07ddb0ceb50fc6a373eccc1a87dd4167ee342d1c19d28c4d89d045ef8"
+      url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.16.28/ingitdb_0.16.28_darwin_arm64.tar.gz"
+      sha256 "8c9d0d288a7e2096f9392fa487c3292e893899c018f3a83729524ebe2aa8d450"
 
       define_method(:install) do
         bin.install "ingitdb"
@@ -29,15 +29,15 @@ class Ingitdb < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.16.26/ingitdb_0.16.26_linux_amd64.tar.gz"
-      sha256 "90793651e894962385336efc46de819c3590bd97707cee5f913b920143d9fd44"
+      url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.16.28/ingitdb_0.16.28_linux_amd64.tar.gz"
+      sha256 "19169a7536e69729455939c83d733c03e73b7c75b57c0449b6cd819020db52df"
       define_method(:install) do
         bin.install "ingitdb"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.16.26/ingitdb_0.16.26_linux_arm64.tar.gz"
-      sha256 "c4054c1d47d804bb3cbf3447d954b8fee418878c2b104d4fd3689e442d358e77"
+      url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.16.28/ingitdb_0.16.28_linux_arm64.tar.gz"
+      sha256 "7239d8ca692e60feb3324a69c2ea9dee6c6a071bb1d582808e40add76c40300a"
       define_method(:install) do
         bin.install "ingitdb"
       end
