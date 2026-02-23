@@ -5,20 +5,20 @@
 class Ingitdb < Formula
   desc "ingitdb – a CLI for a developer-grade, schema-validated, AI-native database whose storage engine is a Git repository."
   homepage "https://ingitdb.com"
-  version "0.17.0"
+  version "0.17.5"
   license "MIT"
   depends_on :linux
 
   if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.17.0/ingitdb_0.17.0_linux_amd64.tar.gz"
-    sha256 "53c6b584e3395334fa19d56f654aac95a470a4444b697817360e33289c20eb7d"
+    url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.17.5/ingitdb_0.17.5_linux_amd64.tar.gz"
+    sha256 "908dbbd39e6f408d75cbb09333e6dea7d092748ab72e988b2139fc119afd2971"
     define_method(:install) do
       bin.install "ingitdb"
     end
   end
   if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.17.0/ingitdb_0.17.0_linux_arm64.tar.gz"
-    sha256 "3f9a65a17f415cbb3b04ba1738b9011cfbef8d3f9547e0c08d1e03257db4775e"
+    url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.17.5/ingitdb_0.17.5_linux_arm64.tar.gz"
+    sha256 "eb2565f598a00b83a3486c577d0a4ffb416b7f80bd0be78e268d76e92d9301bb"
     define_method(:install) do
       bin.install "ingitdb"
     end
