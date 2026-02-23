@@ -5,22 +5,42 @@
 class Ingitdb < Formula
   desc "ingitdb – a CLI for a developer-grade, schema-validated, AI-native database whose storage engine is a Git repository."
   homepage "https://ingitdb.com"
-  version "0.16.20"
+  version "0.16.26"
   license "MIT"
-  depends_on :linux
 
-  if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.16.20/ingitdb_0.16.20_linux_amd64.tar.gz"
-    sha256 "429f8b5d14255eaa21ca2535d0c3d7a69a270ea1cbca8d56fdacfae88839ce91"
-    define_method(:install) do
-      bin.install "ingitdb"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.16.26/ingitdb_0.16.26_darwin_amd64.tar.gz"
+      sha256 "9a0ff106b3ddde06847448c40c95cf09589c501e8180d48bb6ca519f5e642e55"
+
+      define_method(:install) do
+        bin.install "ingitdb"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.16.26/ingitdb_0.16.26_darwin_arm64.tar.gz"
+      sha256 "77cd12e07ddb0ceb50fc6a373eccc1a87dd4167ee342d1c19d28c4d89d045ef8"
+
+      define_method(:install) do
+        bin.install "ingitdb"
+      end
     end
   end
-  if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.16.20/ingitdb_0.16.20_linux_arm64.tar.gz"
-    sha256 "fa7dcd9a196e0c701c57441cf97461e42064e996f1c67175a546efd0c28c5bee"
-    define_method(:install) do
-      bin.install "ingitdb"
+
+  on_linux do
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.16.26/ingitdb_0.16.26_linux_amd64.tar.gz"
+      sha256 "90793651e894962385336efc46de819c3590bd97707cee5f913b920143d9fd44"
+      define_method(:install) do
+        bin.install "ingitdb"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ingitdb/ingitdb-cli/releases/download/v0.16.26/ingitdb_0.16.26_linux_arm64.tar.gz"
+      sha256 "c4054c1d47d804bb3cbf3447d954b8fee418878c2b104d4fd3689e442d358e77"
+      define_method(:install) do
+        bin.install "ingitdb"
+      end
     end
   end
 
