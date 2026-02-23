@@ -3,7 +3,7 @@ cask "ingitdb" do
   name "ingitdb"
   desc "ingitdb – a CLI for a developer-grade, schema-validated, AI-native database whose storage engine is a Git repository."
   homepage "https://ingitdb.com"
-  version "0.16.36"
+  version "0.16.37"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,11 +14,11 @@ cask "ingitdb" do
   on_macos do
     on_intel do
       url "https://github.com/ingitdb/ingitdb-cli/releases/download/v#{version}/ingitdb_#{version}_darwin_amd64.tar.gz"
-      sha256 "bb7ac2098a2ea3498b0af06fbbcae83cc1c1a9b56650ddc544beccc96ad5a06c"
+      sha256 "4d833380355b71d409ba96195ce2d37c79508facfbdb06e93a7d9b3f74f630d8"
     end
     on_arm do
       url "https://github.com/ingitdb/ingitdb-cli/releases/download/v#{version}/ingitdb_#{version}_darwin_arm64.tar.gz"
-      sha256 "771d6d2bfbf3eb8b35d1c0dd0db25887ea5ada8d70e41e889ec054126a1fa900"
+      sha256 "32c104eaf5cadd84133ff758f8fa20d481b6b8d1f64d63a4c1355bb999987bbc"
     end
   end
 
